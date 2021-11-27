@@ -1,0 +1,188 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: #8000ff url(./img/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  object-fit: cover;
+  font-family: 'Poppins', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+section,
+header {
+  width: 70%;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 2em;
+  }
+
+  .logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0;
+  }
+
+  nav ul {
+    display: flex;
+    a {
+      padding: 2.5em 1.5em;
+      display: block;
+    }
+
+    .active {
+      font-weight: bold;
+      background-color: white;
+      color: black;
+      margin-left: 2em;
+      padding: 2.5em;
+    }
+  }
+}
+
+h1 {
+  font-size: 5rem;
+  width: 40%;
+  line-height: 5rem;
+  margin-left: 2em;
+  margin-top: 3.5em;
+}
+
+/* overlay */
+
+.overlay {
+  position: fixed;
+  height: 100vh;
+  background-color: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 75% auto 6em;
+  opacity: 0;
+  transform: translateX(10%) scale(0.9);
+  pointer-events: none;
+}
+
+.left,
+.right,
+.middle {
+  height: 100vh;
+  transform: translateX(30%);
+  opacity: 0;
+}
+
+h2 {
+  color: #8000ff;
+  font-size: 5rem;
+  margin: 0;
+}
+
+.left {
+  padding: 8em 10em;
+
+  p.subhead {
+    color: black;
+    font-size: 1.5rem;
+    margin-top: -0.5em;
+  }
+}
+
+.cards {
+  display: flex;
+  margin-top: 5em;
+  .card {
+    padding: 2em;
+    background: #ffffff;
+    box-shadow: 15px 15px 53px rgba(128, 0, 255, 0.11);
+    border-radius: 1.5em;
+
+    strong {
+      color: black;
+    }
+
+    p {
+      color: black;
+    }
+
+    &:nth-of-type(2) {
+      margin-left: 2em;
+    }
+
+    .cta {
+      padding: 0.5em 1em;
+      border-radius: 0.3em;
+      text-decoration: none;
+      background: #8000ff;
+      margin-top: 1em;
+      display: inline-block;
+      color: white;
+      font-weight: bold;
+    }
+
+    .pay-once {
+      background: #ead5ff;
+      color: #3f007e;
+    }
+  }
+}
+
+.middle {
+  padding-top: 10em;
+
+  a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+    padding: 0.4em 0;
+    display: block;
+    transition: all 1s ease-out;
+  }
+
+  .secondary a:hover {
+    color: #8000ff;
+  }
+
+  .social-nav {
+    margin-top: 3em;
+    display: flex;
+    gap: 1em;
+  }
+
+  a:hover svg path {
+    fill: #8000ff;
+    transition: all 1s ease-out;
+  }
+}
+
+.right {
+  display: grid;
+  justify-items: center;
+  background: #8000ff;
+}
+
+.exit {
+  margin-top: 1.2em;
+  cursor: pointer;
+}

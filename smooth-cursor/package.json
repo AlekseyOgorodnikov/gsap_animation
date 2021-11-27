@@ -1,0 +1,14 @@
+{
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^2.4.2"
+  },
+  "dependencies": {
+    "gsap": "^3.7.0"
+  }
+}
